@@ -1,12 +1,12 @@
 .ball {
   position: relative;
-  width: 12vw;
-  height: 12vw;
+  width: 9.5vw;
+  height: 9.5vw;
   border-radius: 50%;
-  margin: 0 1rem 0 ;
+  margin: 0 0.8vw 0 ;
   text-align: center;
-  line-height: 12vw;
-  font-size: xx-large;
+  line-height: 9.5vw;
+  font-size: 2vw;
   font-weight: bold;
 }
 
@@ -23,17 +23,22 @@
   z-index: 2;
 }
 
+.ball-contain {
+  display: flex;
+  justify-content: center;
+}
+
 .ball-list {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3vw;
 }
 
 .btns {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 #cnt {

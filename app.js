@@ -1,5 +1,7 @@
 const lottoBtn = document.querySelector('#btn')
 lottoBtn.addEventListener('click', function() {
+  const ballContain = document.createElement('div')
+  ballContain.classList.add('ball-contain')
   const ballList = document.createElement('div')
   ballList.classList.add('ball-list')
   // 번호 랜덤 뽑기, 배열
@@ -22,15 +24,18 @@ lottoBtn.addEventListener('click', function() {
       ball.style.backgroundColor = 'rgb(72, 211, 93)';
     }
     ballList.appendChild(ball)
+    ballContain.appendChild(ballList)
   }
   const result = document.querySelector('#result')
-  result.appendChild(ballList)
+  result.appendChild(ballContain)
 })
 
 const lottoCnt = document.querySelector('#cnt')
 lottoCnt.addEventListener('click', function() {
   const cnt = prompt('로또 몇 개 필요하세요?', 1)
   for (let i = 0; i < cnt; i++) {
+    const ballContain = document.createElement('div')
+    ballContain.classList.add('ball-contain')
     const ballList = document.createElement('div')
     ballList.classList.add('ball-list')
     // 번호 랜덤 뽑기, 배열
@@ -53,9 +58,10 @@ lottoCnt.addEventListener('click', function() {
         ball.style.backgroundColor = 'rgb(72, 211, 93)';
       }
       ballList.appendChild(ball)
+      ballContain.appendChild(ballList)
     }
     const result = document.querySelector('#result')
-    result.appendChild(ballList)
+    result.appendChild(ballContain)
   }  
 })
 
