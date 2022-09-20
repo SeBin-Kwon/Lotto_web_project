@@ -1,4 +1,5 @@
 .ball {
+  position: relative;
   width: 12vw;
   height: 12vw;
   border-radius: 50%;
@@ -8,9 +9,44 @@
   font-size: xx-large;
   font-weight: bold;
 }
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+  filter: blur(5px);
+  z-index: 2;
+}
+
 .ball-list {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+#cnt {
+  color: white;
+  background-color: rgb(38, 168, 255);
+}
+#btn {
+  color: white;
+  background-color: rgb(177, 130, 253);
+}
+
+h1 {
+  color: rgb(61, 61, 61);
+  margin-top: 3rem;
+  text-align: center;
 }
